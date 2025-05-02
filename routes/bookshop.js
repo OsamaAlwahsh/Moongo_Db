@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const BookShop = require("../models/BookShop");
 
-// Add a new bookshop
 router.post('/', async (req, res) => {
   try {
     const bookShop = new BookShop(req.body);
