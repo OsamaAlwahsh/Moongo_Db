@@ -12,7 +12,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all bookshops
 router.get("/", async (req, res) => {
   try {
     const bookShops = await BookShop.find();
@@ -22,7 +21,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get bookshop by ID
 router.get("/:id", async (req, res) => {
   try {
     const bookShop = await BookShop.findOne({ shopId: req.params.id });
@@ -33,7 +31,6 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Update bookshop
 router.put("/:id", async (req, res) => {
   try {
     const bookShop = await BookShop.findOneAndUpdate(
@@ -48,7 +45,6 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// Delete bookshop
 router.delete("/:id", async (req, res) => {
   try {
     const result = await BookShop.deleteOne({ shopId: req.params.id });
