@@ -4,7 +4,7 @@ const BookShopSchema = new mongoose.Schema({
   shopId: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   location: String,
-  booksAvailable: [String], // Array of bookIds
+  booksAvailable: [String], 
   contactNumber: String
 });
 
